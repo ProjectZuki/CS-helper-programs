@@ -15,7 +15,8 @@ int main() {
   for (double i = 2; i <= n; i++) {
     t_n = i - 1 + (2 / i) * sum;
     if (static_cast<int>(i) % 10000 == 0) {
-        cout << "n: " << i << " t_n: " << setprecision(2) << fixed << t_n << endl;
+        // cout << setfill(' ');
+        cout << "n: " << left << setw(10) << static_cast<int>(i) << " t_n: " << setprecision(4) << fixed << setw(15) << t_n << endl;
     }
     sum += t_n;
   }
